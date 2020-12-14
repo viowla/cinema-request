@@ -17,8 +17,8 @@ public class CinemaInformationService {
     private RestTemplate restTemplate;
 
     @HystrixCommand(
-            fallbackMethod = "getUserBooksFallback",
-            threadPoolKey = "getUserBooks",
+            fallbackMethod = "getMovieByIdFallback",
+            threadPoolKey = "getMovieById",
             threadPoolProperties = {
                     @HystrixProperty(name="coreSize", value="100"),
                     @HystrixProperty(name="maximumSize", value="120"),
